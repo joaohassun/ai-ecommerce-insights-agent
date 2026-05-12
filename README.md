@@ -1,142 +1,218 @@
-# AI-Powered E-commerce Analytics Agent
+# AI E-commerce Insights Assistant
 
 ## Overview
 
-This project builds an end-to-end analytics system on the Brazilian Olist e-commerce dataset, designed to simulate how a data analyst translates raw data into business insights and recommendations.
+AI E-commerce Insights Assistant is an interactive analytics application built on the Brazilian Olist e-commerce dataset, designed to simulate how modern analytics teams transform raw transactional data into business insights, operational diagnostics and executive recommendations.
 
-Beyond traditional analysis, the project introduces an intent-driven query system that dynamically generates insights based on business questions, mimicking how an analyst would respond in a real-world setting.
+The project combines structured analytics, automated insight generation and an interactive Streamlit dashboard to bridge the gap between traditional notebook-based analysis and practical business-facing analytics tools.
+
+Beyond static analysis, the system includes an intent-driven query architecture and rule-based insight engine capable of dynamically generating recommendations based on business problems and operational patterns.
 
 ---
 
 ## Objectives
 
-- Transform raw transactional data into structured business insights  
-- Identify key drivers of customer satisfaction, revenue and operational performance  
-- Build a reusable insight generation engine  
-- Simulate an AI-assisted business analyst through a query interface  
+- Transform raw e-commerce data into structured business intelligence  
+- Identify drivers of customer satisfaction, delivery performance and revenue generation  
+- Build a reusable insight generation framework  
+- Simulate an AI-assisted analytics workflow through dynamic business querying  
+- Convert analytical outputs into an interactive decision-support application  
 
 ---
 
 ## Dataset
 
-The project uses the publicly available **Olist Brazilian E-commerce Dataset**, which includes:
+The project uses the publicly available **Olist Brazilian E-commerce Dataset**, containing:
 
 - Orders and order items  
 - Customer information  
 - Product categories  
 - Reviews and ratings  
 - Delivery timestamps  
+- Freight and pricing information  
+
+---
+
+## Application Features
+
+The Streamlit application includes:
+
+### Interactive KPI Dashboard
+- Revenue tracking
+- Order volume monitoring
+- Review score analysis
+- Delivery performance metrics
+
+### Customer Satisfaction Analytics
+- Review score distribution
+- Delivery delay impact analysis
+- Lowest-performing category diagnostics
+
+### Delivery Performance Monitoring
+- Delivery delay distribution
+- Late delivery analysis
+- Category-level logistics diagnostics
+
+### Automated Business Recommendations
+A rule-based recommendation engine that translates analytical findings into actionable business recommendations with different priority levels.
+
+### Executive Report Generation
+Automatically generates structured executive-style summaries of operational and customer experience performance.
 
 ---
 
 ## Methodology
 
-The system is structured as a modular analytics pipeline:
+The system is structured as a modular analytics pipeline.
 
 ### 1. Data Preparation
-- Data cleaning and type handling  
-- Feature engineering (delivery delays, revenue, etc.)  
-- Separation of order-level vs item-level data  
+- Data cleaning and preprocessing  
+- Feature engineering (delivery delays, revenue, late delivery indicators, etc.)  
+- Timestamp handling and KPI construction  
 
 ### 2. Insight Engine
-A rule-based system that generates structured outputs:
-- Insight  
-- Business implication  
-- Recommended action  
+A rule-based analytics engine generates:
+- Business insights  
+- Operational implications  
+- Recommended actions  
 
-Covered domains:
-- Delivery performance  
+Covered analytical domains include:
 - Customer satisfaction  
+- Delivery performance  
 - Revenue concentration  
-- Geographic performance  
-- Freight cost  
+- Freight costs  
 - Review distribution  
+- Product category performance  
 
-### 3. Automated Business Reporting
-Insights are compiled into a structured, executive-ready report.
+### 3. Query-Based Insight System
+The project includes an intent-driven analytical querying layer that:
+- Classifies business questions  
+- Routes requests to relevant analytical functions  
+- Combines insights dynamically into structured responses  
 
-### 4. Query-Based Insight System
-A dynamic interface that:
-- Classifies user intent  
-- Routes queries to relevant analytical functions  
-- Combines multiple insights into a single response  
-
-### 5. Advanced Query Reasoning Layer
-Enhances the system with:
+### 4. Advanced Query Reasoning Layer
+Enhances the system through:
 - Multi-intent handling  
 - Insight prioritization  
-- Structured responses (Executive Answer, Key Takeaways, Detailed Insights)
+- Structured response generation  
 
-### 6. Optional LLM Rewrite Layer
-A lightweight local language model (FLAN-T5) is used to improve clarity and communication of the final output while keeping the analytical logic deterministic and transparent.
+### 5. Optional LLM Rewrite Layer
+A lightweight FLAN-T5 model was integrated to improve readability and communication quality of generated outputs while preserving deterministic analytical logic.
 
 ---
 
-## Example Questions
+## Example Business Questions
 
 The system can answer questions such as:
 
-- What drives customer satisfaction and how is delivery performing?  
-- Which categories generate the most revenue and what about freight costs?  
+- What operational factors are driving customer dissatisfaction?  
+- How does delivery performance affect review scores?  
+- Which product categories generate the most revenue?  
 - What are the main business risks in the dataset?  
+- Which operational metrics should leadership prioritize?  
 
 ---
 
 ## Key Findings
 
-- Delivery performance exceeds expectations, with orders arriving earlier than estimated on average  
-- Customer satisfaction is strongly associated with delivery performance relative to expectations  
-- Revenue is concentrated in a limited number of categories, creating both opportunities and risk  
-- Freight cost varies significantly across categories and may impact conversion  
+- Customer satisfaction is strongly associated with delivery performance relative to estimated delivery dates  
+- Revenue is concentrated in a limited number of product categories, creating both opportunity and concentration risk  
+- Freight cost varies substantially across categories and may impact customer experience and conversion  
+- Delivery performance is one of the strongest operational indicators linked to customer review outcomes  
 
 ---
 
 ## Business Recommendations
 
-- Treat delivery performance vs estimate as a core KPI  
-- Optimize logistics in high-impact regions and sellers  
-- Diversify category growth to reduce concentration risk  
-- Investigate low-review segments for operational issues  
-- Analyze high freight cost categories for margin and satisfaction impact  
+- Treat delivery performance relative to estimated dates as a core operational KPI  
+- Improve logistics performance in high-delay categories and regions  
+- Investigate low-review categories for operational inefficiencies  
+- Monitor freight cost trends across high-volume categories  
+- Expand category diversification strategies to reduce concentration risk  
 
 ---
 
-## Tech Stack
+## Technologies Used
 
 - Python  
 - Pandas  
+- Streamlit  
+- Plotly  
+- Scikit-learn  
 - Jupyter Notebook  
 - Hugging Face Transformers (FLAN-T5)  
 
 ---
 
+## Application Screenshots
+
+### Overview Dashboard
+
+![Overview Dashboard](screenshots/overview_dashboard.png)
+
+---
+
+### Customer Satisfaction Analysis
+
+![Customer Satisfaction](screenshots/customer_satisfaction.png)
+
+---
+
+### Delivery Performance Analysis
+
+![Delivery Performance](screenshots/delivery_performance.png)
+
+---
+
+### Business Recommendations
+
+![Business Recommendations](screenshots/business_recommendations.png)
+
+---
+
 ## Limitations
 
-- The insight engine is rule-based and does not learn from new data  
-- Query understanding relies on intent classification rather than full natural language reasoning  
-- The LLM layer is optional and lightweight, prioritizing interpretability over generative capability  
+- The insight engine is rule-based and does not continuously learn from new data  
+- Query interpretation relies on intent classification rather than full autonomous reasoning  
+- The optional LLM layer prioritizes interpretability and lightweight deployment over advanced generative reasoning  
 
 ---
 
 ## Future Improvements
 
-- Integrate more advanced LLMs for improved reasoning  
-- Expand to additional data sources (seller, product-level features)  
-- Build an interactive interface (e.g. Streamlit)  
-- Introduce feedback loops for adaptive insights  
+- Deploy the application publicly using Streamlit Cloud  
+- Integrate stronger LLM-based analytical reasoning  
+- Add natural language querying directly through the interface  
+- Introduce predictive delivery delay modeling  
+- Expand customer segmentation and behavioral analytics  
+- Add real-time dashboard capabilities  
 
 ---
 
 ## How to Run
 
-1. Open the notebook:
-2. Run all cells from top to bottom
-3. Outputs will be saved in: outputs/
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/ai-ecommerce-insights-agent.git
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
 
 ---
 
 ## Final Note
 
-This project focuses on bridging the gap between data analysis and business decision-making by combining structured analytics with an intent-driven insight system.
+This project focuses on bridging the gap between data analysis and business decision-making by combining structured analytics, automated insight generation and interactive business-facing dashboards.
 
-It reflects how modern data teams move beyond dashboards toward interactive, decision-support tools.
+It reflects how modern analytics workflows increasingly move beyond static dashboards toward intelligent decision-support systems and AI-assisted business analytics tools.
